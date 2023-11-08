@@ -15,21 +15,8 @@ To create a Trigger using PL/SQL.
 
 ## Program:
 ```
-CREATE TABLE employe(
-  empid NUMBER,
-  empname VARCHAR2(10),
-  dept VARCHAR2(10),
-  salary NUMBER
-);
-
-CREATE TABLE salary_log (
-  log_id NUMBER GENERATED ALWAYS AS IDENTITY,
-  empid NUMBER,
-  empname VARCHAR2(10),
-  old_salary NUMBER,
-  new_salary NUMBER,
-  update_date DATE
-);
+CREATE TABLE employe(empid NUMBER,empname VARCHAR2(10),dept VARCHAR2(10),salary NUMBER);
+CREATE TABLE salary_log ( log_id NUMBER GENERATED ALWAYS AS IDENTITY, empid NUMBER, empname VARCHAR2(10),old_salary NUMBER,new_salary NUMBER,update_date DATE);
 -- Insert the values in the employee table
 insert into employe values(1,'Kar','IT',1000000);
 insert into employe values(2,'Boha','SALES',500000)
